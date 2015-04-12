@@ -42,7 +42,7 @@
         }
       });
 
-      if (settings.equalize_on_stack === false) {
+      if (settings.equalize_on_stack === true) {
         if (isStacked) return;
       };
 

@@ -49,15 +49,16 @@
           
           <form>
             <select ng-change="process()"ng-model="userSelected">
+              <option value="" selected>Select A Brand</option>
               <option value="Reebok">Reebok</option>
               <option value="Nike">Nike</option>
             </select>
           </form>
           
-          <ul class="small-block-grid-1 medium-block-grid-2">
+          <ul class="resultsGrid small-block-grid-1 medium-block-grid-2" data-equalizer>
 
-                <li class="card" ng-repeat="shoe in selectedShoes">
-                  <div >
+                <li  ng-repeat="shoe in selectedShoes" data-equalizer-watch >
+                  <div class="card">
                     <p class="brand">Brand:{{ shoe.brand }}</p>
                     <p class="gender">Gender:{{ shoe.gender }}</p>
                     <p class="price">Price:{{ shoe.price | currency }}</p>
@@ -80,6 +81,7 @@
       <input type="hidden" id="txtDebug" name="txtDebug" value="true" />
       <script src="library/bower_components/jquery/dist/jquery.min.js"></script>
       <script src="library/bower_components/foundation/js/foundation.min.js"></script>
+      <script src="library/bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
       <script src="library/bower_components/angular/angular.min.js"></script>
       <script src="library/js/rem-unit-polyfill.min.js"></script>
       <script src="library/js/app.js"></script>

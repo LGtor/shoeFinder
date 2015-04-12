@@ -76,85 +76,169 @@ $(document).ready(function() {
 
 /* ==========================================================================
     START ANGULAR APP
-   ========================================================================== */
-
-var app = angular.module('myApp', []);
+ ========================================================================== */
 
 
-app.controller('mainController', ['$scope', function($scope) {
-  
-    $scope.selectedShoes = [];
+   var app = angular.module('myApp', []);
+
+
+   app.controller('mainController', ['$scope', function($scope) {
+
+       $scope.selectedShoes = [];
+
+       $scope.process = function() {
+
+           $scope.selectedShoes = [];
+
+           var userSelected = $scope.userSelected;
+
+           for (var i = 0; i < $scope.shoes.length; i++) {
+               if ($scope.shoes[i].brand === userSelected) {
+                   $scope.selectedShoes.push($scope.shoes[i]);
+               }
+           }
+
+       };
+
+       $scope.shoes = [
+
+            {
+               brand: "Nike",
+               gender: "male",
+               model: "Free 5.0",
+               color: "black",
+               activity: "running",
+               price: 129.99,
+               image: "../html/library/images/nikeFree5.0.jpg"
+           },
+
+           {
+               brand: "Nike",
+               gender: "male",
+               model: "Flyknit 4.0",
+               color: "black",
+               activity: "running",
+               price: 159.99,
+               image: "../html/library/images/nikeFlyknit.jpg"
+           },
+
+            {
+               brand: "Nike",
+               gender: "male",
+               model: "Free 5.0",
+               color: "black",
+               activity: "running",
+               price: 129.99,
+               image: "../html/library/images/nikeFree5.0.jpg"
+           },
+
+           {
+               brand: "Nike",
+               gender: "male",
+               model: "Flyknit 4.0",
+               color: "black",
+               activity: "running",
+               price: 159.99,
+               image: "../html/library/images/nikeFlyknit.jpg"
+           },
+
+            {
+               brand: "Nike",
+               gender: "male",
+               model: "Free 5.0",
+               color: "black",
+               activity: "running",
+               price: 129.99,
+               image: "../html/library/images/nikeFree5.0.jpg"
+           },
+
+           {
+               brand: "Nike",
+               gender: "male",
+               model: "Flyknit 4.0",
+               color: "black",
+               activity: "running",
+               price: 159.99,
+               image: "../html/library/images/nikeFlyknit.jpg"
+           },
+
+           {
+               brand: "Reebok",
+               gender: "male",
+               model: "Z Pump Fusion ",
+               color: "black /yellow",
+               activity: "running",
+               price: 139.99,
+               image: "../html/library/images/reebokZPump.jpg"
+           },
+
+          {
+              brand: "Reebok",
+              gender: "male",
+              model: "Z Pump Fusion ",
+              color: "black /yellow",
+              activity: "running",
+              price: 139.99,
+              image: "../html/library/images/reebokZPump.jpg"
+          },
+
+          {
+              brand: "Reebok",
+              gender: "male",
+              model: "Z Pump Fusion ",
+              color: "black /yellow",
+              activity: "running",
+              price: 139.99,
+              image: "../html/library/images/reebokZPump.jpg"
+          },
+
+          {
+              brand: "Reebok",
+              gender: "male",
+              model: "Z Pump Fusion ",
+              color: "black /yellow",
+              activity: "running",
+              price: 139.99,
+              image: "../html/library/images/reebokZPump.jpg"
+          },
+
+          {
+              brand: "Reebok",
+              gender: "male",
+              model: "Z Pump Fusion ",
+              color: "black /yellow",
+              activity: "running",
+              price: 139.99,
+              image: "../html/library/images/reebokZPump.jpg"
+          },
+
+          {
+              brand: "Reebok",
+              gender: "male",
+              model: "Z Pump Fusion ",
+              color: "black /yellow",
+              activity: "running",
+              price: 139.99,
+              image: "../html/library/images/reebokZPump.jpg"
+          },
+
+          {
+              brand: "Reebok",
+              gender: "male",
+              model: "Z Pump Fusion ",
+              color: "black /yellow",
+              activity: "running",
+              price: 139.99,
+              image: "../html/library/images/reebokZPump.jpg"
+          }
 
 
 
 
-
-
-    $scope.process = function() {
-        
-        $scope.selectedShoes = [];
-       
-        var userSelected = $scope.userSelected;
-
-        for (var i = 0; i < $scope.shoes.length; i++) {
-            if ($scope.shoes[i].brand === userSelected) {
-                $scope.selectedShoes.push($scope.shoes[i]);
-            }
-        }
-
-    };
-
-    $scope.shoes = [{
-            brand: "Nike",
-            gender: "male",
-            model: "Free 5.0",
-            color: "black",
-            activity: "running",
-            price: 129.99,
-            image: "../html/library/images/nikeFree5.0.jpg"
-        },
-
-        {
-            brand: "Nike",
-            gender: "male",
-            model: "Flyknit 4.0",
-            color: "black",
-            activity: "running",
-            price: 159.99,
-            image:  "../html/library/images/nikeFlyknit.jpg"
-        },
+       ]
 
 
 
-        {
-            brand: "Reebok",
-            gender: "male",
-            model: "Z Pump Fusion ",
-            color: "black /yellow",
-            activity: "running",
-            price: 139.99,
-            image:  "../html/library/images/reebokZPump.jpg"
-        },
-
-        {
-            brand: "Reebok",
-            gender: "female",
-            model: "Z aPump Fusion ",
-            color: "black f/yellow",
-            activity: "frunning",
-            price: 149.99,
-            image:  "../html/library/images/reebokZPump.jpg"
-        }
-
-
-
-
-    ]
-
-
-
-}]);
-
-
+   }]);
 
 

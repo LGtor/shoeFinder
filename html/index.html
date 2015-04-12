@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="apple-touch-icon" href="library/images/apple-icon-touch.png">
+    <link rel="icon" href="library/images/favicon.png">
+    <!--[if IE]>
+    <link rel="shortcut icon" href="library/images/favicon.ico">
+    <![endif]-->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/library/images/win8-tile-icon.png">
+    <title>H-hat Foundation 5 Boilerplate</title>
+    <link rel="stylesheet" href="library/css/app.css" />
+    <script src="library/bower_components/modernizr/modernizr.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/nwmatcher/1.2.5/nwmatcher.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <!--[if IE ]>
+  <body class="ie">
+    <![endif]-->
+    <!--[if !IE]>-->
+    <body ng-app="myApp">
+      <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+  <div class="wrapper">
+
+    <div class="row">
+      <header class="small-12 columns">
+           <h1>Shoe Finder Beta</h1>
+      </header>
+    </div>
+
+
+
+    <div class="row">
+      <section class="appWrapper small-12 columns">
+        
+        <div class="main" ng-controller="mainController">
+        
+          <h3>{{userSelected}}</h3>
+          
+          <form>
+            <select ng-change="process()"ng-model="userSelected">
+              <option value="Reebok">Reebok</option>
+              <option value="Nike">Nike</option>
+            </select>
+          </form>
+          
+          <ul class="small-block-grid-1 medium-block-grid-2">
+
+                <li class="card" ng-repeat="shoe in selectedShoes">
+                  <div >
+                    <p class="brand">Brand:{{ shoe.brand }}</p>
+                    <p class="gender">Gender:{{ shoe.gender }}</p>
+                    <p class="price">Price:{{ shoe.price | currency }}</p>
+                    <img ng-src="{{ shoe.image }}"/>
+                  </div>
+                </li>
+          
+          </ul>
+
+         
+        </div>
+
+      <section>
+    </div>
+    
+</div>        
+        
+    
+      
+      <input type="hidden" id="txtDebug" name="txtDebug" value="true" />
+      <script src="library/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="library/bower_components/foundation/js/foundation.min.js"></script>
+      <script src="library/bower_components/angular/angular.min.js"></script>
+      <script src="library/js/rem-unit-polyfill.min.js"></script>
+      <script src="library/js/app.js"></script>
+    </body>
+  </html>

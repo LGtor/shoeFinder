@@ -32,10 +32,6 @@ Additions to Foundation's default package include:
 
 -------------------------------------------
 
-# Foundation Compass Template (Original Foundation README)
-
-The easiest way to get started with Foundation + Compass.
-
 ## Requirements
 
   * Ruby 1.9+

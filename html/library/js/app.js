@@ -111,7 +111,7 @@ app.controller('mainController', ['$scope', function($scope) {
             color: "black",
             activity: "running",
             price: 129.99,
-            image: "../html5-boilerplate/img/nikeFree5.0.jpg"
+            image: "../html/library/images/nikeFree5.0.jpg"
         },
 
         {
@@ -121,7 +121,7 @@ app.controller('mainController', ['$scope', function($scope) {
             color: "black",
             activity: "running",
             price: 159.99,
-            image: "../html5-boilerplate/img/nikeFlyknit.jpg"
+            image:  "../html/library/images/nikeFlyknit.jpg"
         },
 
 
@@ -133,7 +133,7 @@ app.controller('mainController', ['$scope', function($scope) {
             color: "black /yellow",
             activity: "running",
             price: 139.99,
-            image: "../html5-boilerplate/img/reebokZPump.jpg"
+            image:  "../html/library/images/reebokZPump.jpg"
         },
 
         {
@@ -143,7 +143,7 @@ app.controller('mainController', ['$scope', function($scope) {
             color: "black f/yellow",
             activity: "frunning",
             price: 149.99,
-            image: "../html5-boilerplate/img/reebokZPump.jpg"
+            image:  "../html/library/images/reebokZPump.jpg"
         }
 
 
